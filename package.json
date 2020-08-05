@@ -10,7 +10,7 @@
     "serve": "node dist/server.js",
     "start": "./scripts/start.sh",
     "seed": "./scripts/seed.sh",
-    "dev": "./scripts/dev.sh",
+    "dev": "nodemon src/server/ts",
     "build": "tsc"
   },
   "keywords": [

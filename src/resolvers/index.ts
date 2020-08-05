@@ -9,7 +9,7 @@ export function getResolver() {
   let resolver: Resolver = {};
 
   // Register Query to resolvers
-  const queries = readdirSync('./src/graphql/resolvers/queries');
+  const queries = readdirSync('./src/resolvers/queries');
   queries.forEach(name => {
     const fileName = `${path.resolve(__dirname, 'queries')}/${name}`;
     const module = require(fileName);
@@ -20,7 +20,7 @@ export function getResolver() {
   });
 
   // Register Mutation to resolvers
-  const mutations = readdirSync('./src/graphql/resolvers/mutations');
+  const mutations = readdirSync('./src/resolvers/mutations');
   mutations.forEach(name => {
     const fileName = `${path.resolve(__dirname, 'mutations')}/${name}`;
     const module = require(fileName);
@@ -31,7 +31,7 @@ export function getResolver() {
   });
 
   // Register scalar types
-  const scalarTypes = readdirSync('./src/graphql/resolvers/types');
+  const scalarTypes = readdirSync('./src/resolvers/types');
   scalarTypes.forEach(name => {
     const fileName = `${path.resolve(__dirname, 'types')}/${name}`;
     const module = require(fileName);

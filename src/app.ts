@@ -11,7 +11,7 @@ import { db } from './database';
 
 // A map of functions which return data for the schema.
 const resolvers = getResolver();
-const type = importSchema('./src/graphql/types/schema.graphql');
+const type = importSchema('./src/types/graphql/schema.graphql');
 
 // The GraphQL schema
 const typeDefs = gql`
