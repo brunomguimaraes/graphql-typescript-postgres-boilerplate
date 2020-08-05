@@ -1,12 +1,12 @@
-const { connect } = require('../../../database/seeds/db/connect');
+const { connect } = require('../../seeds/db/connect.ts');
 const pool = connect();
 
-const database = {
+const db = {
   query: function(text, params, callback) {
     return pool.query(text, params, callback);
   },
 };
 
 module.exports = {
-  database,
+  db,
 };

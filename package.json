@@ -8,10 +8,10 @@
   ],
   "scripts": {
     "serve": "node dist/server.js",
-    "start": "./scripts/start.sh",
-    "seed": "./scripts/seed.sh",
+    "build": "tsc",
+    "seed": "node ./database/seeds/todo-list/index.ts",
     "dev": "nodemon src/server/ts",
-    "build": "tsc"
+    "start": "yarn build && yarn serve"
   },
   "keywords": [
     "graphql",
