@@ -1,13 +1,19 @@
-# graphql-typescript-postgres-boilerplate
-i'm tired of doing everything from scratch everytime, so i build this
+# GraphQL + TypeScript + PostgresSQL + Apollo Server Boilerplate
+I was tired of doing everything from scratch everytime, so i build this boilerplate since it's my favorite 2020's backend stack(Typescript+Postgres+GraphQl+Apollo Server using docker)
 
-Typescript+Postgres+GraphQl+Apollo boilerplate using docker 
+## Requirements
+NodeJS v12.16.3
+Docker v2.3.0.4
 
-node v12.16.3
+## Step by step:
+### Installation 
+`yarn install`
+### Create docker container 
+`docker-compose up -d`
+### Seed the database(optional)
+`yarn seed`
+### Run
+`yarn dev`
+### Production
+`yarn start`
 
-yarn install
-docker-compose up -d
-yarn seed
-yarn dev
-
-production: yarn start
