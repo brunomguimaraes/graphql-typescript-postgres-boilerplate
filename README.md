@@ -2,8 +2,8 @@
 I was tired of doing everything from scratch everytime, so i build this boilerplate since it's my favorite 2020's backend stack(Typescript+Postgres+GraphQl+Apollo Server using docker)
 
 ## Requirements
-NodeJS v12.16.3
-Docker v2.3.0.4
+- NodeJS v12.16.3
+- Docker v2.3.0.4
 
 ## Step by step:
 ### Installation 
