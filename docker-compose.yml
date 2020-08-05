@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: "postgres:11"
+    container_name: "todo"
+    env_file:
+    - ./.env
+    ports:
+    - "54320:5432"
+    volumes:
+    - ./database/sql/database.sql:/docker-entrypoint-initdb.d/database.sql

@@ -1,0 +1,26 @@
+type ResponseTodoList {
+  status: String!
+  message: String!
+  data: [TodoListItem]
+}
+
+type TodoListItem {
+  id: ID!
+  content: String!
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+input InputTodoListItem {
+  content: String!
+}
+
+type Query {
+  todoListItems(keyword: String): ResponseTodoList!
+}
+
+type Mutation {
+  createTodoItem(item: InputTodoListItem): ResponseTodoList!
+  updateTodoItem(id: ID!, item: InputTodoListItem!): ResponseTodoList!
+  deleteTodoItem(id: ID!): ResponseTodoList!
+}
