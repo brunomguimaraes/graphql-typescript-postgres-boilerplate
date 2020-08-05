@@ -1,5 +1,5 @@
 # GraphQL + TypeScript + PostgresSQL + Apollo Server Boilerplate
-I was tired of doing everything from scratch everytime, so i build this boilerplate since it's my favorite 2020's backend stack(Typescript+Postgres+GraphQl+Apollo Server using docker)
+I was tired of doing everything from scratch everytime, so i build this boilerplate since it's my favorite 2020's backend stack(Typescript+Postgres+GraphQL+Apollo Server using docker)
 
 ## Requirements
 - NodeJS v12.16.3
