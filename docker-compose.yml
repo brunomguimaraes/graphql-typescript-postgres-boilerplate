@@ -1,0 +1,11 @@
+version: '3'
+services:
+  db:
+    image: "postgres:13"
+    container_name: "boilerplate"
+    env_file:
+    - ./.env
+    ports:
+    - "54320:5432"
+    volumes:
+    - ./database/sql:/docker-entrypoint-initdb.d/
