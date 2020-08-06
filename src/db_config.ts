@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: '../.env'});
 
 const default_config = {
   client: 'pg',
@@ -19,6 +19,7 @@ const default_config = {
   },
   timezone: 'UTC'
 }
+
 interface KnexConfig {
   [key: string]: object;
 };

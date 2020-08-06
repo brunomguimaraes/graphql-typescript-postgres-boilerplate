@@ -1,5 +1,9 @@
 const path = require('path');
-const {CheckerPlugin} = require('awesome-typescript-loader');
+const { CheckerPlugin } = require('awesome-typescript-loader');
+const webpack = require('webpack');
+const dotenv = require('dotenv').config( {
+  path: path.join(__dirname, '.env')
+} );
 var nodeExternals = require('webpack-node-externals');
 //nunca olvides de colocar target node en webpack
 //node externals pior el error de aws-sdk 
@@ -35,6 +39,9 @@ module.exports = {
   },
   plugins:[
     new CheckerPlugin(),
+    new webpack.DefinePlugin({
+      "process.env": dotenv.parsed
+  }),
   ]
   
 };

@@ -9,12 +9,13 @@
   "scripts": {
     "dev": "concurrently \" nodemon ./dist/bundle.js \" \" webpack --watch\" ",
     "build": "webpack",
-    "migrate:up":"knex --knexfile ./src/knexfile.ts migrate:latest",
+    "migrate:up": "knex --knexfile ./src/knexfile.ts migrate:latest",
     "generate:types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "apollo-server-express": "^2.13.1",
     "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.0.0",
     "graphql-tools": "^6.0.0",

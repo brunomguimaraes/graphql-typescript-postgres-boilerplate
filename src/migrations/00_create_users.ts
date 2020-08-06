@@ -5,7 +5,7 @@ export async function up(knex: Knex): Promise<any> {
     return knex.schema.createTable('users',(table:Knex.CreateTableBuilder)=>{
         table.increments('id');
         table.string('full_name',36);
-        table.integer('country_code');
+        table.string('country_code');
         table.timestamps(true,true);
 
     })

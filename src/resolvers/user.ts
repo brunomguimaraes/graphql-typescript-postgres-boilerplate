@@ -35,7 +35,7 @@ const resolvers : Resolvers ={
                 user = await User.query().insert({...args.user});
             } catch (error) {
                 console.log(error);
-               throw new UserInputError('Email Invalido', {
+               throw new UserInputError('Error!', {
                    invalidArgs: Object.keys(args),
                  });
             }
