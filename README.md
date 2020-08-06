@@ -26,7 +26,7 @@ POSTGRES_DB=database
 `yarn migrate:up`
 
 ### Generate types
-Run `yarn dev`, open another terminal window and run `generate:types`
+Run `yarn dev`, open another terminal window and run `yarn generate:types`
 
 ### Run
 
