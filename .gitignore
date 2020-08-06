@@ -26,7 +26,7 @@ build/Release
 # Dependency directory
 node_modules
 
-# relay generated files
+#generated files
 **/__generated__
 
 # Optional npm cache directory
@@ -50,3 +50,5 @@ build/
 dev-schema.json
 
 /public/
+
+dist
