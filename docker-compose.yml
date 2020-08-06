@@ -1,8 +1,8 @@
 version: '3'
 services:
   db:
-    image: "postgres:11"
-    container_name: "todo"
+    image: "postgres:13"
+    container_name: "boilerplate"
     env_file:
     - ./.env
     ports:

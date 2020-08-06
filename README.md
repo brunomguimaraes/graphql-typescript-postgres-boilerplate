@@ -14,11 +14,6 @@ I was tired of doing everything from scratch everytime, so i build this boilerpl
 
 ##### default:
 ```
-POSTGRES_USER=docker
-POSTGRES_PASSWORD=docker
-POSTGRES_HOST=0.0.0.0
-POSTGRES_DB=todo
-POSTGRES_PORT=54320
 ```
 
 ### Create docker container 
@@ -29,7 +24,4 @@ POSTGRES_PORT=54320
 
 ### Run
 `yarn dev`
-
-### Production
-`yarn start`
 
