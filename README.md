@@ -3,13 +3,10 @@ I was tired of doing everything from scratch everytime, so i build this boilerpl
 
 ## Requirements
 - NodeJS v12.16.3
-- Docker v2.3.0.4
 
 ## Step by step:
 ### Installation 
 `yarn install` or just `yarn`
-
-
 
 ### Set up dotenv(.env)
 - Create `.env` file
