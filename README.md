@@ -6,6 +6,7 @@ I was tired of doing everything from scratch everytime, so i build this boilerpl
   <img src="https://i.imgur.com/4uxbL65.png" align="center" width="160" height="160" />
   <img src="https://i.imgur.com/MLjSw2C.png" align="center" width="160" height="160" />
   <img src="https://i.imgur.com/l3CKuud.png" align="center" width="160" height="160" />
+  <img src="https://i.imgur.com/Lfl7EIS.png" align="center" width="160" height="160" />
 </p>
 
 ## Requirements
