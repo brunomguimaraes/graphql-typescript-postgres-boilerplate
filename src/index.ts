@@ -2,7 +2,7 @@ import express, { Application } from 'express';
 import {  ApolloServer , Config } from 'apollo-server-express';
 import schema from './schema';
 import Knex from 'knex';
-import{ Model} from 'objection';
+import{ Model } from 'objection';
 import dbconfig from './db_config';
 const db = Knex(dbconfig["development"]);
 

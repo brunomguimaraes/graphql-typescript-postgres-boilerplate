@@ -1,5 +1,5 @@
-import {Model} from 'objection';
-import {Species,Maybe} from '../__generated__/generated-types';
+import { Model } from 'objection';
+import { Species,Maybe } from '../__generated__/generated-types';
 
 import User from './User';
 

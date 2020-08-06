@@ -1,4 +1,4 @@
-import { Resolvers} from '../__generated__/generated-types';
+import { Resolvers } from '../__generated__/generated-types';
 import { User,Pet } from '../models';
 import { UserInputError } from 'apollo-server-express';
 
