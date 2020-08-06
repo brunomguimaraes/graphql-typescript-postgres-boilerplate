@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "concurrently \" nodemon ./dist/bundle.js \" \" webpack --watch\" ",
     "build": "webpack",
-    "migrate:up":"knex --knexfile ./src/database/knexfile.ts migrate:latest",
+    "migrate:up":"knex --knexfile ./src/knexfile.ts migrate:latest",
     "generate:types": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
