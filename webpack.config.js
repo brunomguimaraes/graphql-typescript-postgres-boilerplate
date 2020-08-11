@@ -40,7 +40,7 @@ module.exports = {
   plugins:[
     new CheckerPlugin(),
     new webpack.DefinePlugin({
-      "process.env": dotenv.parsed
+      ".env": dotenv.parsed
   }),
   ]
   
