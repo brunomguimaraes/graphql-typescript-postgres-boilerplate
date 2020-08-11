@@ -1,6 +1,6 @@
-import { Resolvers } from '../__generated__/generated-types';
-import { User,Pet } from '../models';
-import { UserInputError } from 'apollo-server-express';
+import { Resolvers } from '../__generated__/generated-types'
+import { User, Character } from '../models'
+import { UserInputError } from 'apollo-server-express'
 
 interface assertion {
     [key: string]:string | number ;
@@ -9,52 +9,52 @@ interface assertion {
 type StringIndexed<T> = T & assertion;
 
 const resolvers : Resolvers ={
-    Query:{
-        users: async (parent,args,ctx)=>{
-            const users : User[] = await User.query();
-            return users;
-        },
-        user:async (parent,args,ctx)=>{
-            const user :User = await await User.query().findById(args.id);
-
-           return user;
-        },
+  Query:{
+    users: async (parent,args,ctx)=>{
+      const users : User[] = await User.query()
+      return users
     },
-    User:{
-        pets:async (parent,args,ctx)=>{
-            const pets : Pet[] = await User.relatedQuery("pets").for(parent.id);
+    user:async (parent,args,ctx)=>{
+      const user: User = await await User.query().findById(args.id)
 
-            return pets;
-        }
-        
+      return user
     },
-    Mutation:{
-        createUser:async (parent,args,ctx)=>{
-            let user : User;
-            try {
-                user = await User.query().insert({...args.user});
-            } catch (error) {
-                console.log(error);
-               throw new UserInputError('Error!', {
-                   invalidArgs: Object.keys(args),
-                 });
-            }
-            return user;
-        },
-        updateUser:async (parent,{user:{id,...data}},ctx)=>{
+  },
+  User:{
+    characters:async (parent,args,ctx)=>{
+      const characters : Character[] = await User.relatedQuery('characters').for(parent.id)
 
-            let user : User = await User.query().patchAndFetchById(id,data);
-
-            return user;
-
-        },
-        deleteUser:async (parent,args,ctx)=>{
-            const deleted = await User.query().deleteById(args.id);
-            return "Succesfull deleted";
-        },
-
+      return characters
     }
+        
+  },
+  Mutation:{
+    createUser:async (parent,args,ctx)=>{
+      let user : User
+      try {
+        user = await User.query().insert({...args.user})
+      } catch (error) {
+        console.log(error)
+        throw new UserInputError('Error!', {
+          invalidArgs: Object.keys(args),
+        })
+      }
+      return user
+    },
+    updateUser:async (parent,{user:{id,...data}},ctx)=>{
+
+      const user : User = await User.query().patchAndFetchById(id,data)
+
+      return user
+
+    },
+    deleteUser:async (parent,args,ctx)=>{
+      const deleted = await User.query().deleteById(args.id)
+      return 'Succesfull deleted'
+    },
+
+  }
 }
 
 
-export default resolvers;
+export default resolvers

@@ -1,39 +1,37 @@
-import { Model } from 'objection';
-import { Maybe } from '../__generated__/generated-types';
-import Pet from './Pet';
+import { Model } from 'objection'
+import { Maybe } from '../__generated__/generated-types'
+import Character from './Character'
 
 
 
 class User extends Model{
-    static tableName = "users";
+    static tableName = 'users';
     id! : number;
     full_name!: Maybe<string>;
-    country_code! : Maybe<string>;
     created_at?:string;
-    pets?:Pet[];
+    characters?: Character[];
 
     static jsonSchema = {
-        type:'object',
-        required:['full_name'],
+      type:'object',
+      required:['full_name'],
 
-        properties:{
-            id: { type:'integer'},
-            full_name:{type :'string', min:1, max :255},
-            country_code:{type :'string', min:1, max :255},
-            created_at:{type :'string', min:1, max :255}
-        }
+      properties:{
+        id: { type:'integer'},
+        full_name:{type :'string', min:1, max :255},
+        created_at:{type :'string', min:1, max :255}
+      }
     }
 
-    static relationMappings =()=>({
-        pets: {
-            relation: Model.HasManyRelation,
-           modelClass: Pet,
-            join: {
-              from: 'users.id',
-              to: 'pets.owner_id'
-            }
-          }
+    static relationMappings = () => ({
+      characters: {
+        relation: Model.HasManyRelation,
+        modelClass: Character,
+        join: {
+          from: 'users.id',
+          to: 'character.creator_id'
+        }
+      }
     })
 }
 
-export default User;
+export default User

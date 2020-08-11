@@ -4,6 +4,7 @@ declare module '*.graphql' {
 
   export = Schema
 }
+
 declare module '*.gql' {
   import { DocumentNode } from 'graphql'
   const Schema: DocumentNode

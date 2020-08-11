@@ -1,62 +1,57 @@
-enum Species{
-    BIRDS,
-    FISH,
-    MAMMALS,
-    REPTILES
+enum CharacterType {
+    PC,
+    NPC
 }
 
 type User {
     id: Int!
     full_name: String
-    country_code: String
-    created_at:String
-    pets:[Pet]
+    created_at: String
+    characters: [Character]
 }
 
-type Pet {
+type Character {
     id: Int!
     name: String
-    owner_id: Int!
-    specie: Species
-    created_at:String
-    owner:User
+    creator_id: Int!
+    character_type: CharacterType
+    created_at: String
+    creator: User
+
 }
 
-input createUserInput{
+input createUserInput {
     full_name: String!
-    country_code: String!
 }
 
-input createPetInput{
-    name: String!
-    owner_id: Int!
-    specie: Species!
-}
-
-input updateUserInput{
+input updateUserInput {
     id:Int!
     full_name: String
-    country_code: String
 }
 
+input createCharacterInput {
+    name: String!
+    creator_id: Int!
+    character_type: CharacterType!
+}
 
-input updatePetInput{
+input updateCharacterInput {
     id:Int!
     name: String!
 }
 
 type Query{
-    pets:[Pet]
-    users:[User]
-    user(id:Int!):User
-    pet(id:Int!):Pet
+    user(id: Int!): User
+    users: [User]
+    character(id: Int!): Character
+    characters: [Character]
 }
 
 type Mutation{
-    createPet(pet:createPetInput!):Pet
-    createUser(user:createUserInput!):User
-    deletePet(id:Int!):String
-    deleteUser(id:Int!):String
-    updatePet(pet:updatePetInput!):Pet
-    updateUser(user:updateUserInput!):User
+    createUser(user: createUserInput!):User
+    updateUser(user: updateUserInput!):User
+    deleteUser(id: Int!):String
+    createCharacter(character: createCharacterInput!): Character
+    deleteCharacter(id: Int!): String
+    updateCharacter(character: updateCharacterInput!): Character
 }

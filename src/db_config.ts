@@ -1,4 +1,4 @@
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({path: '../.env'})
 
 const default_config = {
   client: 'pg',
@@ -22,7 +22,7 @@ const default_config = {
 
 interface KnexConfig {
   [key: string]: object;
-};
+}
 const config: KnexConfig = {
   development: {
     ...default_config
@@ -33,6 +33,6 @@ const config: KnexConfig = {
   production: {
     ...default_config
   }
-};
+}
 
-export default config;
+export default config
