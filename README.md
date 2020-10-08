@@ -30,6 +30,11 @@ POSTGRES_HOST=127.0.0.1
 POSTGRES_DB=database
 POSTGRES_PORT=54320
 ```
+### Externals
+Make sure docker is running
+
+Make sure Postgres is running
+
 ### Create docker container
 `docker-compose up -d`
 
